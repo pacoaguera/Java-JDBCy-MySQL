@@ -8,7 +8,7 @@ public final class ProductoDao extends Dao {
     public Producto buscarProducto(int codigo) throws Exception {
         
         try {
-            String sql = "SELECT codigo , nombre FROM producto WHERE codigo = " + codigo + "";
+            String sql = "SELECT codigo , nombre FROM producto WHERE codigo = '" + codigo + "'";
             consultarBase(sql);
             
             Producto pro1 = null;
@@ -36,4 +36,5 @@ public final class ProductoDao extends Dao {
         }
         
     }
+    
 }
